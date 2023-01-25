@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <title>Kalkulator</title>
     <style type="text/css">
-        div.insideBox {
+        div {
             float: left;
             background-color: beige;
             width: 50px;
@@ -41,7 +41,7 @@
 
 <body>
 
-    <div id="output"></div>
+    <p id="output"></p>
     <script type="text/javascript">
         // MODEL
         let resultBox = '';
@@ -49,28 +49,26 @@
         updateView();
         function updateView() {
             document.getElementById('output').innerHTML = /*html*/`
-            <div class="inside">
             <div class="resultBox">${resultBox}</div>
-            <div class="insideBox" style="clear:left;" onclick="addCharacter(7)">7</div>
-            <div class="insideBox" onclick="addCharacter(8)">8</div>
-            <div class="insideBox" onclick="addCharacter(9)">9</div>
-            <div class="insideBox" onclick="addCharacter('÷')">÷</div>
+            <div style="clear:left;" onclick="addCharacter(7)">7</div>
+            <div onclick="addCharacter(8)">8</div>
+            <div onclick="addCharacter(9)">9</div>
+            <div onclick="addCharacter('÷')">÷</div>
 
-            <div class="insideBox" style="clear:left;" onclick="addCharacter(4)">4</div>
-            <div class="insideBox" onclick="addCharacter(5)">5</div>
-            <div class="insideBox" onclick="addCharacter(6)">6</div>
-            <div class="insideBox" onclick="addCharacter('×')">×</div>
+            <div style="clear:left;" onclick="addCharacter(4)">4</div>
+            <div onclick="addCharacter(5)">5</div>
+            <div onclick="addCharacter(6)">6</div>
+            <div onclick="addCharacter('×')">×</div>
         
-            <div class="insideBox" style="clear:left;" onclick="addCharacter(1)">1</div>
-            <div class="insideBox" onclick="addCharacter(2)">2</div>
-            <div class="insideBox" onclick="addCharacter(3)">3</div>
-            <div class="insideBox" onclick="addCharacter('-')">-</div>
+            <div style="clear:left;" onclick="addCharacter(1)">1</div>
+            <div onclick="addCharacter(2)">2</div>
+            <div onclick="addCharacter(3)">3</div>
+            <div onclick="addCharacter('-')">-</div>
         
-            <div class="insideBox" style="clear:left;" onclick="addCharacter(0)">0</div>
-            <div class="insideBox" onclick="clearResult();">C</div>
-            <div class="insideBox" onclick="calculate()">=</div>
-            <div class="insideBox" onclick="addCharacter('+')">+</div>
-            </div>
+            <div style="clear:left;" onclick="addCharacter(0)">0</div>
+            <div onclick="clearResult();">C</div>
+            <div onclick="calculate()">=</div>
+            <div onclick="addCharacter('+')">+</div>
             `;
         }
         // CONTROLLER
